@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 
+// Feel free to change styles below
 const styles = {
   outer: {
-    display: 'flex',
+    display: 'flex',              // allows for two-column layout
   },
   sticky: {
-    flex: 1,
-    position: 'sticky',
-    top: 0,
-    border: '3px solid orchid',
-    maxHeight: '100vh',
+    flex: 1,                      // will absorb the space not taken by scollText
+    position: 'sticky',           // will remain on the top despite scolling
+    top: 0,                       // describes absolute position
+    border: '3px solid orchid',   // temporary, for illustration purposes
+    background: 'pink',           // temporary, for illustration purposes
+    maxHeight: '100vh',           // prevents top from scolling
   },
   scrollText: {
-    width: '50vw',
+    width: '50vw',                // 50% of the view width
   },
   step: {
     margin: '50vh 0',
@@ -23,7 +25,7 @@ const styles = {
 
 const PageStories = () => {
   // TODO: read https://reactjs.org/docs/hooks-overview.html for context
-  const [currentStepIndex, setCurrentStepIndex] = useState(null);
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
   // This callback fires when a Step hits the offset threshold. It receives the
   // data prop of the step, which in this demo stores the index of the step.
   const onStepEnter = ({ data }) => {
