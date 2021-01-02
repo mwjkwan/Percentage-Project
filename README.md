@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# percentage-project
-=======
 # Percentage Project
->>>>>>> 2a1349b11952fc2f3921987efafe31c53339e082
 
 Data and stories from the Percentage Project. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
