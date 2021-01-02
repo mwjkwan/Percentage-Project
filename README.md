@@ -1,11 +1,14 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Percentage Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Data and stories from the Percentage Project. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs the packages that you need.
 
 ### `npm start`
 
@@ -69,6 +72,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# percentage-project
->>>>>>> 27f9b57... Initial commit
