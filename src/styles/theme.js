@@ -8,9 +8,10 @@ export default {
     muted: '#f6f6f6f',
   },
   fonts: {
-    body: 'system-ui, sans-serif',
+    body: 'Tiempos Text, system-ui, sans-serif',
     heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace',
+    label: 'Calibre, sans-serif',
   },
   fontWeights: {
     body: 400,
