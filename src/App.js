@@ -2,10 +2,20 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import PageStories from './pages/PageStories';
 import PageData from './pages/PageData';
 import PageGallery from './pages/PageGallery';
+import { Navbar, Nav } from 'react-bootstrap'
+import "./Navbar.css";
 
 function App() {
   return (
     <div className="App">
+      <Navbar fixed="top">
+        <Navbar.Brand>The % Project</Navbar.Brand>
+        <Nav>
+          <Nav.Link href="/gallery">03. Gallery</Nav.Link>
+          <Nav.Link href="/data">02. Data</Nav.Link>
+          <Nav.Link href="/">01. Stories</Nav.Link>
+        </Nav>
+      </Navbar>
       <Switch>
         <Route exact path="/" component={PageStories} />
         <Route exact path="/data" component={PageData} />
@@ -17,3 +27,12 @@ function App() {
 }
 
 export default App;
+
+/* <Navbar bg="dark" variant="pills" expand="lg" sticky="top" style={{position: "absolute", width: "100%"}}>
+                        <Nav className='navigation' class="navbar navbar-expand-md navbar-fixed-top">
+
+                            <Nav.Link onSelect={this.logout} href="/login">Logout</Nav.Link> 
+                            <Nav.Link id="ghome" href="/home"  >Home</Nav.Link>
+                            <Nav.Link id="bgroup" href="/groups" >Find a Group</Nav.Link>
+                            <Nav.Link href="/goal">Goal Page</Nav.Link>
+                            {/* <Button bsStyle="primary">Login</Button> */
