@@ -20,7 +20,7 @@ const styles = {
   },
   step: {
     margin: '50vh 0',
-    border: '1px solid gray',
+    border: '1px solid gray', //how to add correct font
   }
 }
 
@@ -51,11 +51,8 @@ const PageStories = () => {
               <div style={{ ...styles.step, opacity: currentStepIndex === stepIndex ? 1 : 0.2 }}>
                 {/* TODO: This div contains the scrolling elements. What should you replace this with? */}
                 {/*I'm a Scrollama Step of index {currentStepIndex}, */}
-                Name: {people[currentStepIndex].name} {/* why didn't this work with stepIndex :(((()))) */}
-                <p> Year: {people[currentStepIndex].year} </p>
-                <p> Concentration: {people[currentStepIndex].concentration} </p>
-                <p> pronouns: {people[currentStepIndex].pronouns} </p>
-                <p> everything will be: {people[currentStepIndex].color}</p>
+                <h1 style= {{color:people[currentStepIndex].color}}> {people[currentStepIndex].name}</h1> {/* why didn't this work with stepIndex :(((()))) */}
+                <p> Harvard {people[currentStepIndex].year}, {people[currentStepIndex].concentration},  {people[currentStepIndex].pronouns} </p>
                 <p> Quotes (just prints whole array rn): {people[currentStepIndex].quotes}</p>
               </div>
             </Step>
