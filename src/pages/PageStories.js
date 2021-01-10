@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
+import { people } from '../constants/people';
 
 // Feel free to change styles below
 const styles = {
@@ -36,18 +37,26 @@ const PageStories = () => {
     <div style={styles.outer}>
       <div style={styles.sticky}>
         {/* TODO: Replace this with fixed images that change based on currentStepIndex */}
-        I'm sticky. The current triggered step index is: {currentStepIndex}
+        {/*I'm sticky. The current triggered step index is: {currentStepIndex}*/}
+        <img src={people[currentStepIndex].pic} width={600}/>
       </div>
       <div style={styles.scrollText}>
         {/* In order to get rid of the dotted lines, delete "debug" */}
         <Scrollama onStepEnter={onStepEnter} debug>
           {/* TODO: What should [1, 2, 3, 4] be replaced with? */}
           {/* TODO: Read for context on map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map */}
-          {[1, 2, 3, 4].map((_, stepIndex) => (
+          {/* benefits of iterating through index vs iterating through each object in array?*/}
+          {[...Array(people.length).keys()].map((_, stepIndex) => ( 
             <Step data={stepIndex} key={stepIndex}>
               <div style={{ ...styles.step, opacity: currentStepIndex === stepIndex ? 1 : 0.2 }}>
                 {/* TODO: This div contains the scrolling elements. What should you replace this with? */}
-                I'm a Scrollama Step of index {stepIndex}
+                {/*I'm a Scrollama Step of index {currentStepIndex}, */}
+                Name: {people[currentStepIndex].name} {/* why didn't this work with stepIndex :(((()))) */}
+                <p> Year: {people[currentStepIndex].year} </p>
+                <p> Concentration: {people[currentStepIndex].concentration} </p>
+                <p> pronouns: {people[currentStepIndex].pronouns} </p>
+                <p> everything will be: {people[currentStepIndex].color}</p>
+                <p> Quotes (just prints whole array rn): {people[currentStepIndex].quotes}</p>
               </div>
             </Step>
           ))}
