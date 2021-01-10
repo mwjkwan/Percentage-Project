@@ -8,7 +8,7 @@ import "./Navbar.css";
 function App() {
   return (
     <div className="App">
-      <Navbar fixed="top">
+      <Navbar expand="lg">
         <Navbar.Brand>The % Project</Navbar.Brand>
         <Nav>
           <Nav.Link href="/gallery">03. Gallery</Nav.Link>
