@@ -3,15 +3,17 @@ import PageStories from './pages/PageStories';
 import PageData from './pages/PageData';
 import PageGallery from './pages/PageGallery';
 import { Navbar, Nav } from 'react-bootstrap'
+import "./Navbar.css";
 
 function App() {
   return (
     <div className="App">
       <Navbar fixed="top">
+        <Navbar.Brand>The % Project</Navbar.Brand>
         <Nav>
-          <Nav.Link href="/">01. Stories</Nav.Link>
-          <Nav.Link href="/data">02. Data</Nav.Link>
           <Nav.Link href="/gallery">03. Gallery</Nav.Link>
+          <Nav.Link href="/data">02. Data</Nav.Link>
+          <Nav.Link href="/">01. Stories</Nav.Link>
         </Nav>
       </Navbar>
       <Switch>
