@@ -2,6 +2,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import PageStories from './pages/PageStories';
 import PageData from './pages/PageData';
 import PageGallery from './pages/PageGallery';
+import './assets/fonts/typography.css';
 
 function App() {
   return (
