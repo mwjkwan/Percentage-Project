@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Light'), local('Calibre-Light'),
+  src: local('Calibre'), local('Calibre-Light'),
       url('Calibre-Light.woff') format('woff'),
       url('Calibre-Light.ttf') format('truetype');
   font-weight: 300;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Light Italic'), local('Calibre-LightItalic'),
+  src: local('Calibre'), local('Calibre-LightItalic'),
       url('Calibre-LightItalic.woff') format('woff'),
       url('Calibre-LightItalic.ttf') format('truetype');
   font-weight: 300;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Medium Italic'), local('Calibre-MediumItalic'),
+  src: local('Calibre Medium'), local('Calibre-MediumItalic'),
       url('Calibre-MediumItalic.woff') format('woff'),
       url('Calibre-MediumItalic.ttf') format('truetype');
   font-weight: 500;
@@ -36,7 +36,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Black Italic'), local('Calibre-BlackItalic'),
+  src: local('Calibre Black'), local('Calibre-BlackItalic'),
       url('Calibre-BlackItalic.woff') format('woff'),
       url('Calibre-BlackItalic.ttf') format('truetype');
   font-weight: 900;
@@ -72,7 +72,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Regular Italic'), local('Calibre-RegularItalic'),
+  src: local('Calibre Regular'), local('Calibre-RegularItalic'),
       url('Calibre-RegularItalic.woff') format('woff'),
       url('Calibre-RegularItalic.ttf') format('truetype');
   font-weight: normal;
@@ -81,7 +81,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Bold Italic'), local('Calibre-BoldItalic'),
+  src: local('Calibre'), local('Calibre-BoldItalic'),
       url('Calibre-BoldItalic.woff') format('woff'),
       url('Calibre-BoldItalic.ttf') format('truetype');
   font-weight: bold;
@@ -90,7 +90,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Bold'), local('Calibre-Bold'),
+  src: local('Calibre'), local('Calibre-Bold'),
       url('Calibre-Bold.woff') format('woff'),
       url('Calibre-Bold.ttf') format('truetype');
   font-weight: bold;
@@ -107,7 +107,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Semibold Italic'), local('Calibre-SemiboldItalic'),
+  src: local('Calibre Semibold'), local('Calibre-SemiboldItalic'),
       url('Calibre-SemiboldItalic.woff') format('woff'),
       url('Calibre-SemiboldItalic.ttf') format('truetype');
   font-weight: 600;
@@ -116,7 +116,7 @@
 
 @font-face {
   font-family: 'Calibre';
-  src: local('Calibre Thin Italic'), local('Calibre-ThinItalic'),
+  src: local('Calibre Thin'), local('Calibre-ThinItalic'),
       url('Calibre-ThinItalic.woff') format('woff'),
       url('Calibre-ThinItalic.ttf') format('truetype');
   font-weight: 100;
@@ -125,7 +125,7 @@
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: local('Tiempos Text Bold Italic'), local('TiemposText-BoldItalic'),
+  src: local('Tiempos Text'), local('TiemposText-BoldItalic'),
       url('TiemposText-BoldItalic.woff') format('woff'),
       url('TiemposText-BoldItalic.ttf') format('truetype');
   font-weight: bold;
@@ -161,7 +161,7 @@
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: local('Tiempos Text Italic'), local('TiemposText-Italic'),
+  src: local('Tiempos Text'), local('TiemposText-Italic'),
       url('TiemposText-Italic.woff') format('woff'),
       url('TiemposText-Italic.ttf') format('truetype');
   font-weight: normal;
@@ -170,7 +170,7 @@
 
 @font-face {
   font-family: 'Tiempos Headline';
-  src: local('Tiempos Headline Light'), local('TiemposHeadline-Light'),
+  src: local('Tiempos Headline'), local('TiemposHeadline-Light'),
       url('TiemposHeadline-Light.woff') format('woff'),
       url('TiemposHeadline-Light.ttf') format('truetype');
   font-weight: 300;
@@ -179,7 +179,7 @@
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: local('Tiempos Text Bold'), local('TiemposText-Bold'),
+  src: local('Tiempos Text'), local('TiemposText-Bold'),
       url('TiemposText-Bold.woff') format('woff'),
       url('TiemposText-Bold.ttf') format('truetype');
   font-weight: bold;
