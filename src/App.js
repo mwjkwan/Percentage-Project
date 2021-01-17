@@ -1,14 +1,21 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { jsx, ThemeProvider } from 'theme-ui';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import PageStories from './pages/PageStories';
 import PageData from './pages/PageData';
 import PageGallery from './pages/PageGallery';
 import NavigationBar from './NavigationBar';
 
+import './assets/fonts/typography.css';
+import theme from './styles/theme.js';
+
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
       <NavigationBar />
-      <div style={{paddingTop: '65px'}}>
+      <div className='App' style={{paddingTop: '65px'}}>
         <Switch>
           <Route exact path="/" component={PageStories} />
           <Route exact path="/data" component={PageData} />
@@ -16,7 +23,7 @@ function App() {
           <Route component={() => <Redirect to="/" />} />
         </Switch>
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 

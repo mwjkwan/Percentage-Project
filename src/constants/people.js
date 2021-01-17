@@ -1,10 +1,10 @@
 //import images
-import cindy_pic from "../images/CindyWang.jpg";
-import grace_pic from "../images/GraceTian.jpg";
-import eric_pic from "../images/jjemba_half.jpg";
-import miela_pic from "../images/MielaFoster.jpg";
-import robin_pic from "../images/Robin.jpg";
-import sarika_pic from "../images/Sarika.jpg";
+import cindy_pic from "../assets/images/CindyWang.jpg";
+import grace_pic from "../assets/images/GraceTian.jpg";
+import eric_pic from "../assets/images/jjemba_half.jpg";
+import miela_pic from "../assets/images/MielaFoster.jpg";
+import robin_pic from "../assets/images/Robin.jpg";
+import sarika_pic from "../assets/images/Sarika.jpg";
 
 
 //defining all people objects
