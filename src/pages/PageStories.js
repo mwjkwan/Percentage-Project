@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { useState } from 'react';
+import { jsx, Styled } from 'theme-ui';
 import { Scrollama, Step } from 'react-scrollama';
 import { people } from '../constants/people';
 
@@ -51,7 +55,7 @@ const PageStories = () => {
               <div style={{ ...styles.step, opacity: currentStepIndex === stepIndex ? 1 : 0.2 }}>
                 {/* TODO: This div contains the scrolling elements. What should you replace this with? */}
                 {/*I'm a Scrollama Step of index {currentStepIndex}, */}
-                <h1 style= {{color:people[currentStepIndex].color}}> {people[currentStepIndex].name}</h1> {/* why didn't this work with stepIndex :(((()))) */}
+                <Styled.h1 style= {{color:people[currentStepIndex].color}}> {people[currentStepIndex].name}</Styled.h1> {/* why didn't this work with stepIndex :(((()))) */}
                 <p> Harvard {people[currentStepIndex].year}, {people[currentStepIndex].concentration},  {people[currentStepIndex].pronouns} </p>
                 <p> Quotes (just prints whole array rn): {people[currentStepIndex].quotes}</p>
               </div>
