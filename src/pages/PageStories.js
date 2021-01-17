@@ -28,6 +28,8 @@ const styles = {
   }
 }
 
+
+
 const PageStories = () => {
   // TODO: read https://reactjs.org/docs/hooks-overview.html for context
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
@@ -46,18 +48,14 @@ const PageStories = () => {
       </div>
       <div style={styles.scrollText}>
         {/* In order to get rid of the dotted lines, delete "debug" */}
-        <Scrollama onStepEnter={onStepEnter} debug>
-          {/* TODO: What should [1, 2, 3, 4] be replaced with? */}
+        <Scrollama onStepEnter={onStepEnter} offset={0.5} debug>
           {/* TODO: Read for context on map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map */}
-          {/* benefits of iterating through index vs iterating through each object in array?*/}
-          {[...Array(people.length).keys()].map((_, stepIndex) => ( 
+          {people.map((person, stepIndex) => ( 
             <Step data={stepIndex} key={stepIndex}>
-              <div style={{ ...styles.step, opacity: currentStepIndex === stepIndex ? 1 : 0.2 }}>
-                {/* TODO: This div contains the scrolling elements. What should you replace this with? */}
-                {/*I'm a Scrollama Step of index {currentStepIndex}, */}
-                <Styled.h1 style= {{color:people[currentStepIndex].color}}> {people[currentStepIndex].name}</Styled.h1> {/* why didn't this work with stepIndex :(((()))) */}
-                <p> Harvard {people[currentStepIndex].year}, {people[currentStepIndex].concentration},  {people[currentStepIndex].pronouns} </p>
-                <p> Quotes (just prints whole array rn): {people[currentStepIndex].quotes}</p>
+              <div style={styles.step}>
+                <Styled.h1 style= {{color:person.color}}> {person.name}</Styled.h1> {/* why didn't this work with stepIndex :(((()))) */}
+                <p> Harvard {person.year}, {person.concentration},  {person.pronouns} </p>
+                <p> Quotes (just prints whole array rn): {person.quotes} </p>
               </div>
             </Step>
           ))}
