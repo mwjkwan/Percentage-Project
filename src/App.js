@@ -6,6 +6,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import PageStories from './pages/PageStories';
 import PageData from './pages/PageData';
 import PageGallery from './pages/PageGallery';
+import NavigationBar from './NavigationBar';
 
 import './assets/fonts/typography.css';
 import theme from './styles/theme.js';
@@ -13,7 +14,8 @@ import theme from './styles/theme.js';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className='App'>
+      <NavigationBar />
+      <div className='App' style={{paddingTop: '65px'}}>
         <Switch>
           <Route exact path="/" component={PageStories} />
           <Route exact path="/data" component={PageData} />
