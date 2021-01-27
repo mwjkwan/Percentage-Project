@@ -49,14 +49,11 @@ const PageStories = () => {
       </div>
       <div style={styles.scrollText}>
         {/* In order to get rid of the dotted lines, delete "debug" */}
-        <Scrollama onStepEnter={onStepEnter} offset={0.5} debug = {true}>
-          {/* TODO: What should [1, 2, 3, 4] be replaced with? */}
+        <Scrollama onStepEnter={onStepEnter} offset={0.5} debug>
           {/* TODO: Read for context on map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map */}
           {people.map((person, stepIndex) => ( 
             <Step data={stepIndex} key={stepIndex}>
               <div style={styles.step}>
-                {/* TODO: This div contains the scrolling elements. What should you replace this with? */}
-                {/* I'm a Scrollama Step of index {currentStepIndex}, */}
                 <Styled.h1 style= {{color:person.color}}> {person.name}</Styled.h1> {/* why didn't this work with stepIndex :(((()))) */}
                 <p> Harvard {person.year}, {person.concentration},  {person.pronouns} </p>
                 <p> Quotes (just prints whole array rn): {person.quotes} </p>
