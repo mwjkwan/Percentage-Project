@@ -33,9 +33,10 @@ const styles = {
 const PageStories = () => {
   // TODO: read https://reactjs.org/docs/hooks-overview.html for context
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  // const [offset, setOffset] = useState(0); //should this be 0.3?
   // This callback fires when a Step hits the offset threshold. It receives the
   // data prop of the step, which in this demo stores the index of the step.
-  const onStepEnter = ({ data }) => {
+  const onStepEnter = ({ data, direction }) => {
     setCurrentStepIndex(data);
   };
 
