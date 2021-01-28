@@ -12,14 +12,26 @@ const styles = {
         paddingLeft: "40px",
         paddingRight: "40px",
         paddingTop: "10px",
-        paddingBottom: "20px",
+        paddingBottom: "25px",
         transform:'translate(-10%,0%)',
     },
-    quotes: {
+    quotes1: {
         fontSize: "14px",
         lineHeight: "162.1%",
         color: "#0F0F0F",
         paddingTop: "10px"
+    },
+    quotes2: {
+        fontStyle: 'italic',
+        fontSeight: '500',
+        fontSize: '24px',
+        lineHeight: '128.1%',
+        color: '#0F0F0F',
+    },
+    name: {
+        fontFamily: "heading", 
+        fontWeight: '500', 
+        fontSize: '36px'
     }
 }
 
@@ -27,9 +39,12 @@ function PersonCard({ person }) {
     const { color, concentration, name, pronouns, quotes, year } = person;
     return (
         <div style={styles.card}>
-            <Styled.h1 sx={{fontFamily: "heading"}}style= {{color:color}}> {name}</Styled.h1> 
+            <Styled.h1 sx={styles.name} style= {{color:color}}> {name}</Styled.h1> 
                 <p sx={{fontFamily: "label", color:"#727272"}}> HARVARD {year}, {concentration.toUpperCase()},  {pronouns.toUpperCase()} </p>
-                <p sx={styles.quotes}> Quotes: {quotes} </p>
+                {quotes.map((quote, ind) => (
+                    <p sx = {ind % 2 == 0 ? styles.quotes1 : styles.quotes2}>{quote} {ind}</p>
+                ))}
+                {/* <p > Quotes: {quotes} </p> */}
         </div>
       );
 }
