@@ -6,7 +6,6 @@ import { jsx, Styled } from 'theme-ui';
 import { Scrollama, Step } from 'react-scrollama';
 import { people } from '../constants/people';
 import PersonCard from "./../components/PersonCard";
-import "./pagestories.css"
 
 // Feel free to change styles below
 const styles = {
