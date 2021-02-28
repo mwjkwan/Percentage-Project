@@ -19,8 +19,8 @@ const styles = {
     border: '3px solid orchid',   // temporary, for illustration purposes
     background: 'pink',           // temporary, for illustration purposes
     maxHeight: '100vh',           // prevents top from scolling
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   scrollText: {
     width: '50vw',                // 50% of the view width
@@ -48,7 +48,7 @@ const PageStories = () => {
       <div style={styles.sticky}>
         {/* TODO: Replace this with fixed images that change based on currentStepIndex */}
         {/*I'm sticky. The current triggered step index is: {currentStepIndex}*/}
-        <img src={people[currentStepIndex].pic} align="right" width={"450px"}/>
+        <img src={people[currentStepIndex].pic} align="right" width={"500px"}/>
       </div>
       <div style={styles.scrollText}>
         {/* In order to get rid of the dotted lines, delete "debug" */}
