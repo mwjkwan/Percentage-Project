@@ -4,7 +4,7 @@ import { people } from '../constants/people';
 import { article } from '../constants/article';
 import BarGraph from '../components/bargraph'
 import LineGraph2 from '../components/LineGraph2';
-// import Example from '../components/LineGraph'
+import Example from '../components/Dots';
 import { jsx, Styled } from 'theme-ui';
 import { letterFrequency } from '@visx/mock-data';
 import ParentSize from '@visx/responsive/lib/components/ParentSize';
@@ -51,7 +51,8 @@ const PageData = () => {
     <div style={styles.outer}>
       <div style={styles.sticky}>
       {/* <BarGraph data={data} fill = "#fc2e1c"/> */}
-      <LineGraph2 width={window.innerWidth} height={window.innerHeight} > </LineGraph2> 
+      <LineGraph2 width={window.innerWidth} height={window.innerHeight/2} > </LineGraph2> 
+      <Example width={window.innerWidth} height={window.innerHeight/2}/>
       </div>
       <div style={styles.scrollText}>
         {/* In order to get rid of the dotted lines, delete "debug" */}
