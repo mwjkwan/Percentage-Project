@@ -42,7 +42,7 @@ function PersonCard({ person }) {
             <Styled.h1 sx={styles.name} style= {{color:color}}> {name}</Styled.h1> 
                 <p sx={{fontFamily: "label", color:"#727272"}}> HARVARD {year}, {concentration.toUpperCase()},  {pronouns.toUpperCase()} </p>
                 {quotes.map((quote, ind) => (
-                    <p sx = {ind % 2 == 0 ? styles.quotes1 : styles.quotes2}>{quote} {ind}</p>
+                    <p sx = {ind % 2 === 0 ? styles.quotes1 : styles.quotes2}>{quote} {ind}</p>
                 ))}
                 {/* <p > Quotes: {quotes} </p> */}
         </div>
