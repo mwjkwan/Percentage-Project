@@ -5,11 +5,11 @@ import { AxisBottom, AxisLeft } from '@visx/axis';
 import { scaleBand, scaleLinear, scaleOrdinal } from '@visx/scale';
 import { withTooltip, Tooltip, defaultStyles } from '@visx/tooltip';
 
-const purple1 = '#6c5efb';
-const purple2 = '#c998ff';
-export const purple3 = '#a44afe';
-export const background = '#eaedff';
-const defaultMargin = { top: 20, left: 180, right: 40, bottom: 50 };
+const barColor = '#000000';
+const unusedColor = '#000000';
+export const textColor = '#000000';
+export const background = '#ffffff';
+const defaultMargin = { top: 20, left: 180, right: 40, bottom: 20 };
 const tooltipStyles = {
   ...defaultStyles,
   minWidth: 60,
@@ -39,25 +39,25 @@ export default withTooltip(
     const getCategory = (d) => d.category;
 
     // scales
-    const temperatureScale = scaleLinear({
+    const frequencyScale = scaleLinear({
       domain: [0, 1],
       nice: true,
     });
-    const dateScale = scaleBand({
+    const categoryScale = scaleBand({
       domain: data.map(getCategory),
       padding: 0.2,
     });
     const colorScale = scaleOrdinal({
       domain: keys,
-      range: [purple1, purple2, purple3],
+      range: [barColor, unusedColor, textColor],
     });
 
     // bounds
     const xMax = width - margin.left - margin.right;
     const yMax = height - margin.top - margin.bottom;
 
-    temperatureScale.rangeRound([0, xMax]);
-    dateScale.rangeRound([yMax, 0]);
+    frequencyScale.rangeRound([0, xMax]);
+    categoryScale.rangeRound([yMax, 0]);
 
     return width < 10 ? null : (
       <div>
@@ -69,8 +69,8 @@ export default withTooltip(
               keys={keys}
               height={yMax}
               y={getCategory}
-              xScale={temperatureScale}
-              yScale={dateScale}
+              xScale={frequencyScale}
+              yScale={categoryScale}
               color={colorScale}
             >
               {barStacks =>
@@ -109,28 +109,27 @@ export default withTooltip(
             <AxisLeft
               hideAxisLine
               hideTicks
-              scale={dateScale}
-              // tickFormat={formatDate}
-              stroke={purple3}
-              tickStroke={purple3}
+              scale={categoryScale}
+              stroke={textColor}
+              tickStroke={textColor}
               tickLabelProps={() => ({
-                fill: purple3,
+                fill: textColor,
                 fontSize: 11,
                 textAnchor: 'end',
                 dy: '0.33em',
               })}
             />
-            <AxisBottom
+            {/* <AxisBottom
               top={yMax}
-              scale={temperatureScale}
-              stroke={purple3}
-              tickStroke={purple3}
+              scale={frequencyScale}
+              stroke={textColor}
+              tickStroke={textColor}
               tickLabelProps={() => ({
-                fill: purple3,
+                fill: textColor,
                 fontSize: 11,
                 textAnchor: 'middle',
               })}
-            />
+            /> */}
           </Group>
         </svg>
         <div
@@ -149,7 +148,7 @@ export default withTooltip(
             {/* <div style={{ color: colorScale(tooltipData.key) }}>
               <strong>{tooltipData.key}</strong>
             </div> */}
-            <div>{tooltipData.bar.data[tooltipData.key]}</div>
+            <div>{tooltipData.bar.data[tooltipData.key]*100}%</div>
             {/* <div>
               <small>{getCategory(tooltipData.bar.data)}</small>
             </div> */}

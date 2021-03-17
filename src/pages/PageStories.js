@@ -68,7 +68,7 @@ const PageStories = () => {
                 <Styled.h1 style= {{color:person.color}}> {person.name}</Styled.h1> {/* why didn't this work with stepIndex :(((()))) */}
                 <p> Harvard {person.year}, {person.concentration},  {person.pronouns} </p>
                 <p> Quotes (just prints whole array rn): {person.quotes} </p>
-                <StoriesBars width="500" height="500" data={data}/>
+                <StoriesBars width="300" height="220" data={data}/>
               </div>
             </Step>
           ))}
