@@ -2,10 +2,11 @@
 /** @jsx jsx */
 
 import { useState } from 'react';
-import { jsx, Styled } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { Scrollama, Step } from 'react-scrollama';
 import { people } from '../constants/people';
 import StoriesBars from '../components/StoriesBars';
+import PersonCard from "../components/PersonCard";
 
 const data = [
   {category: "my race", frequency: "0.1"},
@@ -23,19 +24,20 @@ const styles = {
     display: 'flex',              // allows for two-column layout
   },
   sticky: {
+    mt: 2,
     flex: 1,                      // will absorb the space not taken by scollText
     position: 'sticky',           // will remain on the top despite scolling
     top: 0,                       // describes absolute position
-    border: '3px solid orchid',   // temporary, for illustration purposes
-    background: 'pink',           // temporary, for illustration purposes
     maxHeight: '100vh',           // prevents top from scolling
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   scrollText: {
     width: '50vw',                // 50% of the view width
   },
   step: {
     margin: '50vh 0',
-    border: '1px solid gray', //how to add correct font
+    //border: '1px solid gray',
   }
 }
 
@@ -54,20 +56,21 @@ const PageStories = () => {
   return (
     <div style={styles.outer}>
       <div style={styles.sticky}>
-        {/* TODO: Replace this with fixed images that change based on currentStepIndex */}
-        {/*I'm sticky. The current triggered step index is: {currentStepIndex}*/}
-        <img src={people[currentStepIndex].pic} width={600}/>
+        <img
+          src={people[currentStepIndex].pic}
+          alt={people[currentStepIndex].name}
+          align="right"
+          width="450px"
+        />
       </div>
       <div style={styles.scrollText}>
         {/* In order to get rid of the dotted lines, delete "debug" */}
-        <Scrollama onStepEnter={onStepEnter} offset={0.5} debug>
+        <Scrollama onStepEnter={onStepEnter} offset={0.5}>
           {/* TODO: Read for context on map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map */}
           {people.map((person, stepIndex) => ( 
             <Step data={stepIndex} key={stepIndex}>
               <div style={styles.step}>
-                <Styled.h1 style= {{color:person.color}}> {person.name}</Styled.h1> {/* why didn't this work with stepIndex :(((()))) */}
-                <p> Harvard {person.year}, {person.concentration},  {person.pronouns} </p>
-                <p> Quotes (just prints whole array rn): {person.quotes} </p>
+                <PersonCard person = {person}/>
                 <StoriesBars width="300" height="220" data={data}/>
               </div>
             </Step>
