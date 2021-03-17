@@ -5,6 +5,17 @@ import { useState } from 'react';
 import { jsx, Styled } from 'theme-ui';
 import { Scrollama, Step } from 'react-scrollama';
 import { people } from '../constants/people';
+import StoriesBars from '../components/StoriesBars';
+
+const data = [
+  {category: "my race", frequency: "0.1"},
+  {category: "my ethnicity", frequency: "0.3"},
+  {category: "my gender identity", frequency: "0.1"},
+  {category: "my sexual orientation", frequency: "0.2"},
+  {category: "my religious beliefs", frequency: "0.05"},
+  {category: "being a first generation student", frequency: "0.05"},
+  {category: "my income status", frequency: "0.2"},
+];
 
 // Feel free to change styles below
 const styles = {
@@ -57,6 +68,7 @@ const PageStories = () => {
                 <Styled.h1 style= {{color:person.color}}> {person.name}</Styled.h1> {/* why didn't this work with stepIndex :(((()))) */}
                 <p> Harvard {person.year}, {person.concentration},  {person.pronouns} </p>
                 <p> Quotes (just prints whole array rn): {person.quotes} </p>
+                <StoriesBars width="500" height="500" data={data}/>
               </div>
             </Step>
           ))}
